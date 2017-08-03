@@ -1,18 +1,10 @@
 package com.hzit.entity;
 
 /**
- * 　　  　  　           \\\|///
- * 　　　 　  　   \\　.-.-　//
- * 　　　　　  　    (.@.@)
- * +-------oOOo-----( _ )-----oOOo--------------------------------------------+
- * |　@author 了了yc　　　　　　                                                                 　|
- * |　@author 江西财经大学软件143                                                   |
- * |　@create 2017年08月03日 - 17:10
- * |    @description
- * +---------------------------------Oooo---------------------------------------+
+ * Created by THINK on 2017/8/3.
  */
 public class Roleinfo {
-    private int rid;
+    private  int rid;
     private String rname;
 
     public int getRid() {
