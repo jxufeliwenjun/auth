@@ -1,7 +1,15 @@
 package com.hzit.entity;
 
 /**
- * Created by THINK on 2017/8/3.
+ * 　　  　  　           \\\|///
+ * 　　　 　  　   \\　.-.-　//
+ * 　　　　　  　    (.@.@)
+ * +-------oOOo-----( _ )-----oOOo--------------------------------------------+
+ * |　@author 了了yc　　　　　　                                                                 　|
+ * |　@author 江西财经大学软件143                                                   |
+ * |　@create 2017年08月03日 - 17:11
+ * |    @description
+ * +---------------------------------Oooo---------------------------------------+
  */
 public class Roleresource {
     private int roleid;

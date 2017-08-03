@@ -1,13 +1,20 @@
 package com.hzit.entity;
 
 /**
- * Created by THINK on 2017/8/3.
+ * 　　  　  　           \\\|///
+ * 　　　 　  　   \\　.-.-　//
+ * 　　　　　  　    (.@.@)
+ * +-------oOOo-----( _ )-----oOOo--------------------------------------------+
+ * |　@author 了了yc　　　　　　                                                                 　|
+ * |　@author 江西财经大学软件143                                                   |
+ * |　@create 2017年08月03日 - 17:13
+ * |    @description
+ * +---------------------------------Oooo---------------------------------------+
  */
 public class Userinfo {
     private int uid;
     private String uname;
     private String upass;
-    private String ustatus;
 
     public int getUid() {
         return uid;
@@ -40,4 +47,6 @@ public class Userinfo {
     public void setUstatus(String ustatus) {
         this.ustatus = ustatus;
     }
+
+    private String ustatus;
 }
