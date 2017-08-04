@@ -5,6 +5,15 @@ package com.hzit.entity;
  */
 public class Roleinfo {
     private  int rid;
+
+    @Override
+    public String toString() {
+        return "Roleinfo{" +
+                "rid=" + rid +
+                ", rname='" + rname + '\'' +
+                '}';
+    }
+
     private String rname;
 
     public int getRid() {

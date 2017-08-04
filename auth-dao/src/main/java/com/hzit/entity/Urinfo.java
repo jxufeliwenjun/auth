@@ -15,6 +15,14 @@ public class Urinfo {
     private int uid;
     private int rid;
 
+    @Override
+    public String toString() {
+        return "Urinfo{" +
+                "uid=" + uid +
+                ", rid=" + rid +
+                '}';
+    }
+
     public int getUid() {
         return uid;
     }

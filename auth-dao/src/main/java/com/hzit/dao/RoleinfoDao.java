@@ -8,13 +8,16 @@ import java.util.List;
  * Created by THINK on 2017/8/3.
  */
 public interface RoleinfoDao {
-    public List<Roleinfo> findRole();
+
+    public List<Roleinfo> findAll();
+
+    public Roleinfo findByRoleId(String roleId);
 
     public int addRole(Roleinfo roleinfo);
 
     public int updateRole(Roleinfo roleinfo);
 
-    public int deleteRole(String Rid);
+    public int deleteRole(String roleid);
 
 
 }
