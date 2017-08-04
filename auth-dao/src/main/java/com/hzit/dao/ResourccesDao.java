@@ -18,6 +18,6 @@ public interface ResourccesDao {
 
     public int deleteResourcces(String rid);
 
-
+    public List<Resourcces> findFirstResources();
 
 }

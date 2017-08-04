@@ -1,6 +1,7 @@
 package com.hzit.web;
 
-import com.hzit.dao.UserinfoDao;
+import com.hzit.dao.ResourccesDao;
+import com.hzit.entity.Resourcces;
 import com.hzit.util.SqlSessionHelper;
 
 import javax.servlet.ServletException;
@@ -9,26 +10,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Created by 袁闯 on 2017/8/4.
  */
-@WebServlet(name = "LoginServlet",value="/loginServlet")
-public class LoginServlet extends HttpServlet {
-
-    UserinfoDao userinfoDao= SqlSessionHelper.getSqlSession().getMapper(UserinfoDao.class);
-
+@WebServlet(name = "RecourceServletFirst",value ="/toAddResource")
+public class RecourceServletFirst extends HttpServlet {
+    ResourccesDao resourccesDao;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String name=request.getParameter("name");
-        System.out.println("发送过来的名字是："+name);
-        String pwd=request.getParameter("pwd");
-        System.out.println("发送过来的密码是："+pwd);
-
-
-
-
-        System.out.println("有个请求来了！");
+        resourccesDao= SqlSessionHelper.getSqlSession().getMapper(ResourccesDao.class);
+        List<Resourcces> firstlist=resourccesDao.findFirstResources();
+        request.setAttribute("firstlist",firstlist);
+        request.getRequestDispatcher("addResources.jsp").forward(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
