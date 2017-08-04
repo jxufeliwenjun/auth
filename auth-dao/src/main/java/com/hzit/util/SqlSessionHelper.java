@@ -2,6 +2,7 @@ package com.hzit.util;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.util.logging.Logger;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -11,10 +12,12 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 public class SqlSessionHelper {
 	private static SqlSession session;
 	private  static SqlSessionFactory factory;
+	static Logger log=Logger.getLogger("SqlSessionHelper");
 	static{
 		Reader r;
 		try {
 			r = Resources.getResourceAsReader("mybatis-config.xml");
+
 			System.out.println("读取配置文件成功");
 			 factory=new SqlSessionFactoryBuilder().build(r);
 			System.out.println("Sqlsession工厂创建成功");
