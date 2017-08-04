@@ -1,26 +1,25 @@
 package com.hzit.util;
 
-import java.io.IOException;
-import java.io.Reader;
-import java.util.logging.Logger;
-
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.apache.log4j.Logger;
+
+import java.io.IOException;
+import java.io.Reader;
 
 public class SqlSessionHelper {
 	private static SqlSession session;
 	private  static SqlSessionFactory factory;
-	static Logger log=Logger.getLogger("SqlSessionHelper");
+	static Logger log= Logger.getLogger("SqlSessionHelper");
 	static{
 		Reader r;
 		try {
 			r = Resources.getResourceAsReader("mybatis-config.xml");
-
-			System.out.println("读取配置文件成功");
+			log.debug("读取配置文件成功");
 			 factory=new SqlSessionFactoryBuilder().build(r);
-			System.out.println("Sqlsession工厂创建成功");
+			log.debug("Sqlsession工厂创建成功");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -28,9 +27,10 @@ public class SqlSessionHelper {
 	
 	}
 
-	public static SqlSession getSqlSession(){	
+	public static SqlSession getSqlSession(){
+		if (session==null)
 			session=factory.openSession();
-			System.out.println("获取了session对象");
+			log.debug("获取了session对象");
 			return session;
 	}
 

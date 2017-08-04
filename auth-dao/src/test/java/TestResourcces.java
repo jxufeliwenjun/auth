@@ -15,7 +15,7 @@ import com.hzit.util.SqlSessionHelper;
 public class TestResourcces {
     public static void main(String[] args)  {
         ResourccesDao dao=SqlSessionHelper.getSqlSession().getMapper(ResourccesDao.class);
-        dao.findResourcces(1);
+        dao.findAll();
 
 
 

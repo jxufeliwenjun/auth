@@ -18,3 +18,6 @@ public interface UserinfoDao {
 
     public Userinfo findUserByNameAndPwd(String name,String pwd);
 }
+
+
+

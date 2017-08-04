@@ -2,9 +2,6 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-
-
-
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC" />
@@ -17,7 +14,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="com/hzit/dao/ResourccesDaoMapper.xml"/>
+        <mapper resource="com/hzit/dao/ResourccesDao.xml"></mapper>
     </mappers>
 </configuration>
-
