@@ -17,13 +17,13 @@ import java.util.List;
  */
 @WebServlet(name = "RecourceServletFirst",value ="/toAddResource")
 public class RecourceServletFirst extends HttpServlet {
-    ResourccesDao resourccesDao;
+   // ResourccesDao resourccesDao;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        resourccesDao= SqlSessionHelper.getSqlSession().getMapper(ResourccesDao.class);
-        List<Resourcces> firstlist=resourccesDao.findFirstResources();
-        request.setAttribute("firstlist",firstlist);
-        request.getRequestDispatcher("addResources.jsp").forward(request,response);
+   //     resourccesDao= SqlSessionHelper.getSqlSession().getMapper(ResourccesDao.class);
+  //      List<Resourcces> firstlist=resourccesDao.findFirstResources();
+  //      request.setAttribute("firstlist",firstlist);
+  //      request.getRequestDispatcher("addResources.jsp").forward(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
