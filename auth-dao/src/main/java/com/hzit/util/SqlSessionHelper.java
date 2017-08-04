@@ -4,6 +4,7 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -11,7 +12,7 @@ import java.io.Reader;
 public class SqlSessionHelper {
 	private static SqlSession session;
 	private  static SqlSessionFactory factory;
-	static org.apache.log4j.Logger log= org.apache.log4j.Logger.getLogger("SqlSessionHelper");
+	static Logger log= Logger.getLogger("SqlSessionHelper");
 	static{
 		Reader r;
 		try {
