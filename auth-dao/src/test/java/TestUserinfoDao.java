@@ -18,12 +18,12 @@ import java.util.List;
 public class TestUserinfoDao {
     public static void main(String[] args) {
         UserinfoDao dao= SqlSessionHelper.getSqlSession().getMapper(UserinfoDao.class);
-        /*List<Userinfo> list=dao.findUser();
+        List<Userinfo> list=dao.findUser();
         for (Userinfo u:list){
             System.out.println(u);
-        }*/
+        }
 
-        Userinfo user=dao.findUserByNameAndPwd("1","2");
-        System.out.println(user);
+        /*Userinfo user=dao.findUserByNameAndPwd("1","2");
+        System.out.println(user);*/
     }
 }
