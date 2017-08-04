@@ -6,4 +6,26 @@
             resultType="com.hzit.entity.Resourcces">
         SELECT * FROM resourcces
     </select>
+
+    <select id="findResourccesByUserId" parameterType="int"
+            resultType="com.hzit.entity.Resourcces">
+        SELECT * FROM resourcces
+        WHERE rid IN (SELECT resourceid FROM `roleresource`WHERE roleid IN
+        (SELECT rid FROM urinfo WHERE uid=#{userid}))
+    </select>
+
+    <insert id="insertResourcces" parameterType="com.hzit.entity.Resourcces">
+        INSERT INTO resourcces
+        VALUES (#{rid},#{rname},#{resurl},#{resorderno},#{redsdes},#{createTime},#{updatetime},#{createMan},#{updateMan})
+    </insert>
+
+    <update id="updateResourcces" parameterType="com.hzit.entity.Resourcces">
+        UPDATE resourcces set
+        rid=#{rid},rname=#{rname},resurl=#{resurl},resorderno=#{resorderno},
+        redsdes=#{redsdes},createTime=#{createTime},updatetime=#{updatetime},createMan=#{createMan},updateMan=#{updateMan}
+    </update>
+
+    <delete id="deleteResourcces" parameterType="String">
+        DELETE from resourcces where rid=#{rid}
+    </delete>
 </mapper>
